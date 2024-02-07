@@ -31,7 +31,7 @@ ENV HASURA_GRAPHQL_METADATA_DEFAULTS='{"backend_configs":{"dataconnector":{"athe
 # FROM hasura/graphql-data-connector:v2.36.0
 
 # # Expose port 8081 for the data-connector-agent service
-# EXPOSE 8081
+EXPOSE 8081
 
 # Set environment variables for the data-connector-agent service
 ENV QUARKUS_LOG_LEVEL=ERROR
