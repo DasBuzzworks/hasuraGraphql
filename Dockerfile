@@ -6,7 +6,7 @@
 FROM hasura/graphql-data-connector:v2.36.0
 
 # Expose port 8081 for the data-connector-agent service
-EXPOSE 8080
+EXPOSE 8081
 
 # Set environment variables for the data-connector-agent service
 ENV QUARKUS_LOG_LEVEL=ERROR
@@ -17,7 +17,6 @@ HEALTHCHECK --interval=5s --timeout=10s --retries=5 --start-period=5s CMD curl -
 
 # Define volumes
 VOLUME /var/lib/postgresql/data
-
 
 
 
@@ -37,7 +36,7 @@ WORKDIR /
 FROM hasura/graphql-engine:v2.36.0
 
 # Expose port 8080 for Hasura GraphQL Engine
-EXPOSE 8081
+EXPOSE 8080
 
 # Set environment variables for Hasura
 ENV HASURA_GRAPHQL_METADATA_DATABASE_URL=postgresql://postgres:cC1ebgb6CGG1B-Gba434*6FceD1-5-*c@roundhouse.proxy.rlwy.net:49328/railway
