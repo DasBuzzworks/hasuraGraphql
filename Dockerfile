@@ -26,7 +26,6 @@ ENV HASURA_GRAPHQL_METADATA_DEFAULTS='{"backend_configs":{"dataconnector":{"athe
 
 # Depend on the data-connector-agent service
 # Modify or remove this depending on your actual needs
-DEPENDS_ON data-connector-agent
 
 # Use the Hasura GraphQL Data Connector image for the data-connector-agent service
 FROM hasura/graphql-data-connector:v2.36.0
